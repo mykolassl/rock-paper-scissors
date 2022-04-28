@@ -10,7 +10,19 @@ function playRound() {
     
     if(computerChoice === playerChoice) {
         alert(`It's a tie! Your and computer's choice was ${playerChoice}`);
+    } else if((playerChoice === 'scissors' && computerChoice === 'paper') ||
+              (playerChoice === 'rock' && computerChoice === 'scissors') ||
+              (playerChoice === 'paper' && computerChoice === 'rock')) {
+        alert(`You win! ${playerChoice} beats ${computerChoice}`);
+    } else {
+        alert(`You lose! ${computerChoice} beats ${playerChoice}`);
     }
 }
 
-playRound();
+function startGame() {
+    for(let i = 0; i < 5; i++) {
+        playRound();
+    }
+}
+
+startGame();
