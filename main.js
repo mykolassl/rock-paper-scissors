@@ -47,4 +47,4 @@ function startGame() {
     }
 }
 
-startGame();
+//startGame();
